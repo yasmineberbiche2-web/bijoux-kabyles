@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tiziri, boutique de bijoux kabyles en argent émaillé et corail, inspirés du savoir-faire d'Ath Yenni.">
+  <title>Tiziri — Bijoux kabyles en argent émaillé</title>
+
+  <!-- Polices Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="entete">
+    <div class="conteneur">
+      <a href="index.html" class="logo" aria-label="Tiziri, retour à l'accueil">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="#b9bcc2" stroke-width="2.5"/>
+          <path d="M20 6 L32 20 L20 34 L8 20Z" fill="#2e7a57"/>
+          <circle cx="20" cy="20" r="5" fill="#c8452c"/>
+        </svg>
+        <span class="logo-texte">Tizi<span>ri</span></span>
+      </a>
+
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="actif">Accueil</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="savoir-faire.html">Savoir-faire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="conteneur">
+        <div>
+          <span class="surtitre">Argent · Émail · Corail</span>
+          <h1>Le bijou kabyle, <em>une mémoire</em> qui se porte</h1>
+          <p>
+            Broches, fibules, bracelets et colliers façonnés à la main, dans la
+            tradition des orfèvres d'Ath Yenni. Chaque pièce raconte une histoire
+            transmise de génération en génération.
+          </p>
+          <div class="actions">
+            <a href="collection.html" class="bouton">Découvrir la collection</a>
+            <a href="savoir-faire.html" class="bouton bouton-clair">Notre savoir-faire</a>
+          </div>
+        </div>
+        <div class="hero-visuel">
+          <img src="images/tabzimt.svg" alt="Grande broche ronde en argent, émail vert, jaune et bleu, ornée de corail">
+        </div>
+      </div>
+    </section>
+    <div class="frise" aria-hidden="true"></div>
+
+    <!-- ===== PIÈCES PHARES ===== -->
+    <section class="section">
+      <div class="conteneur">
+        <div class="titre-section">
+          <h2>Nos pièces phares</h2>
+          <p>Une sélection de bijoux emblématiques, entre héritage et élégance contemporaine.</p>
+        </div>
+
+        <div class="grille-produits">
+          <article class="carte">
+            <div class="carte-image">
+              <span class="badge">Best-seller</span>
+              <img src="images/tabzimt.svg" alt="Broche ronde Tabzimt">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Broche</span>
+              <h3>Tabzimt</h3>
+              <p>La grande broche ronde, symbole de la femme kabyle, sertie de corail.</p>
+              <div class="carte-pied">
+                <span class="prix">320 €</span>
+                <a href="collection.html" class="lien-fleche">Voir →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte-image">
+              <img src="images/bracelet.svg" alt="Bracelet manchette émaillé">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Bracelet</span>
+              <h3>Manchette Ath Yenni</h3>
+              <p>Large bracelet rigide aux bandes d'émail vert et jaune.</p>
+              <div class="carte-pied">
+                <span class="prix">245 €</span>
+                <a href="collection.html" class="lien-fleche">Voir →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte-image">
+              <span class="badge">Nouveau</span>
+              <img src="images/collier.svg" alt="Collier de perles de corail avec pendentif">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Collier</span>
+              <h3>Collier Tafsut</h3>
+              <p>Perles de corail et d'argent, pendentif en losange émaillé.</p>
+              <div class="carte-pied">
+                <span class="prix">280 €</span>
+                <a href="collection.html" class="lien-fleche">Voir →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="centre">
+          <a href="collection.html" class="bouton">Voir toute la collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LES COULEURS DE L'ÉMAIL ===== -->
+    <section class="section section-alt">
+      <div class="conteneur">
+        <div class="titre-section">
+          <h2>Les couleurs de l'émail</h2>
+          <p>Quatre teintes reconnaissables entre toutes, qui font l'identité du bijou kabyle.</p>
+        </div>
+
+        <div class="couleurs">
+          <div class="couleur" style="--teinte: var(--corail)">
+            <div class="pastille"></div>
+            <h3>Le corail</h3>
+            <p>Rouge profond venu de la Méditerranée, il est censé protéger celle qui le porte.</p>
+          </div>
+          <div class="couleur" style="--teinte: var(--vert)">
+            <div class="pastille"></div>
+            <h3>Le vert</h3>
+            <p>Couleur des oliviers et des montagnes du Djurdjura, symbole de fertilité.</p>
+          </div>
+          <div class="couleur" style="--teinte: var(--jaune)">
+            <div class="pastille"></div>
+            <h3>Le jaune</h3>
+            <p>Éclat du soleil et des moissons, il illumine les cloisons d'argent.</p>
+          </div>
+          <div class="couleur" style="--teinte: var(--bleu)">
+            <div class="pastille"></div>
+            <h3>Le bleu</h3>
+            <p>Bleu du ciel et de l'eau, il apporte profondeur et équilibre au motif.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HISTOIRE (APERÇU) ===== -->
+    <section class="section">
+      <div class="conteneur deux-colonnes">
+        <div class="cadre-visuel">
+          <img src="images/fibule.svg" alt="Fibule triangulaire émaillée">
+        </div>
+        <div>
+          <span class="surtitre">Notre histoire</span>
+          <h2>Un héritage façonné à la main</h2>
+          <p>
+            Perché dans les montagnes de Kabylie, le village d'Ath Yenni est réputé
+            depuis des siècles pour ses orfèvres. L'argent y est travaillé, ciselé
+            puis rehaussé d'émail et de corail selon des gestes transmis de père en fils.
+          </p>
+          <p>
+            Tiziri — « clair de lune » en kabyle — perpétue cet art en proposant des
+            bijoux fidèles à la tradition, pour toutes les occasions.
+          </p>
+          <a href="savoir-faire.html" class="bouton">Lire la suite</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="pied">
+    <div class="frise" aria-hidden="true" style="margin-top:-3.5rem; margin-bottom:3rem;"></div>
+    <div class="conteneur">
+      <div class="pied-grille">
+        <div>
+          <h4>Tiziri</h4>
+          <p>Bijoux kabyles en argent émaillé, façonnés à la main dans le respect de la tradition.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="savoir-faire.html">Savoir-faire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Paris, France</li>
+            <li>contact@tiziri-bijoux.fr</li>
+            <li>01 23 45 67 89</li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© <span class="annee">2026</span> Tiziri — Projet de cours (boutique fictive).</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
