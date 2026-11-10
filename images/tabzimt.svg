@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Broche ronde en argent émaillé">
+  <defs>
+    <radialGradient id="ag" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#f4f5f7"/><stop offset=".6" stop-color="#c3c6cc"/><stop offset="1" stop-color="#8d9097"/></radialGradient>
+    <radialGradient id="co" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#f08a6c"/><stop offset=".55" stop-color="#c8452c"/><stop offset="1" stop-color="#7e2416"/></radialGradient>
+  </defs>
+  <!-- pendeloques -->
+  <g stroke="#9a9da4" stroke-width="1.5">
+    <line x1="60" y1="160" x2="55" y2="200"/><line x1="80" y1="170" x2="78" y2="215"/><line x1="100" y1="173" x2="100" y2="225"/><line x1="120" y1="170" x2="122" y2="215"/><line x1="140" y1="160" x2="145" y2="200"/>
+  </g>
+  <g fill="url(#ag)" stroke="#7d8087" stroke-width="1">
+    <path d="M55 198 l6 10 -6 10 -6 -10z"/><path d="M78 213 l6 10 -6 10 -6 -10z"/><path d="M100 223 l6 10 -6 7 -6 -7z"/><path d="M122 213 l6 10 -6 10 -6 -10z"/><path d="M145 198 l6 10 -6 10 -6 -10z"/>
+  </g>
+  <!-- disque -->
+  <circle cx="100" cy="95" r="82" fill="url(#ag)" stroke="#7d8087" stroke-width="2"/>
+  <circle cx="100" cy="95" r="72" fill="none" stroke="#8d9097" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <!-- anneau d'émail cloisonné -->
+  <g stroke="#d9dbdf" stroke-width="2.5">
+    <path d="M100 35 A60 60 0 0 1 152 65 L130 78 A35 35 0 0 0 100 60z" fill="#2e7a57"/>
+    <path d="M152 65 A60 60 0 0 1 152 125 L130 112 A35 35 0 0 0 130 78z" fill="#e2b13c"/>
+    <path d="M152 125 A60 60 0 0 1 100 155 L100 130 A35 35 0 0 0 130 112z" fill="#1f5c9e"/>
+    <path d="M100 155 A60 60 0 0 1 48 125 L70 112 A35 35 0 0 0 100 130z" fill="#2e7a57"/>
+    <path d="M48 125 A60 60 0 0 1 48 65 L70 78 A35 35 0 0 0 70 112z" fill="#e2b13c"/>
+    <path d="M48 65 A60 60 0 0 1 100 35 L100 60 A35 35 0 0 0 70 78z" fill="#1f5c9e"/>
+  </g>
+  <!-- coraux -->
+  <g fill="url(#co)" stroke="#d9dbdf" stroke-width="2">
+    <circle cx="100" cy="95" r="22"/>
+    <circle cx="100" cy="27" r="8"/><circle cx="159" cy="61" r="8"/><circle cx="159" cy="129" r="8"/><circle cx="100" cy="163" r="8"/><circle cx="41" cy="129" r="8"/><circle cx="41" cy="61" r="8"/>
+  </g>
+  <circle cx="93" cy="88" r="5" fill="#fff" opacity=".45"/>
+</svg>

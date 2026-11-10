@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" role="img" aria-label="Bracelet manchette en argent émaillé">
+  <defs>
+    <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f5f7"/><stop offset=".5" stop-color="#c3c6cc"/><stop offset="1" stop-color="#8d9097"/></linearGradient>
+    <radialGradient id="co" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#f08a6c"/><stop offset=".55" stop-color="#c8452c"/><stop offset="1" stop-color="#7e2416"/></radialGradient>
+  </defs>
+  <!-- intérieur -->
+  <ellipse cx="110" cy="70" rx="90" ry="32" fill="#8d9097"/>
+  <ellipse cx="110" cy="72" rx="80" ry="25" fill="#5d6067"/>
+  <!-- corps -->
+  <path d="M20 70 L20 130 A90 32 0 0 0 200 130 L200 70 A90 32 0 0 1 20 70Z" fill="url(#ag)" stroke="#7d8087" stroke-width="2"/>
+  <!-- bandes émaillées -->
+  <path d="M28 88 A85 28 0 0 0 192 88 L192 100 A85 28 0 0 1 28 100Z" fill="#2e7a57" stroke="#d9dbdf" stroke-width="2"/>
+  <path d="M28 112 A85 28 0 0 0 192 112 L192 122 A85 28 0 0 1 28 122Z" fill="#e2b13c" stroke="#d9dbdf" stroke-width="2"/>
+  <!-- losanges bleus -->
+  <g fill="#1f5c9e" stroke="#d9dbdf" stroke-width="2">
+    <path d="M70 117 l10 -9 10 9 -10 9z"/><path d="M130 117 l10 -9 10 9 -10 9z"/>
+  </g>
+  <g fill="url(#co)" stroke="#d9dbdf" stroke-width="2">
+    <circle cx="110" cy="128" r="10"/><circle cx="50" cy="118" r="7"/><circle cx="170" cy="118" r="7"/>
+  </g>
+  <ellipse cx="110" cy="70" rx="90" ry="32" fill="none" stroke="#e7e8eb" stroke-width="3"/>
+</svg>
