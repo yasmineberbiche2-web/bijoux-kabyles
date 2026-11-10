@@ -45,4 +45,4 @@ Ou via GitHub Pages : *Settings → Pages → Branch : main → Save*.
 
 ## Auteure
 
-Melinda — projet de cours.
+Yasmine — projet de cours.
