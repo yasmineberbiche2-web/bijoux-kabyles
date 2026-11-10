@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez la collection Tiziri : broches, fibules, bracelets, colliers et bagues kabyles en argent émaillé.">
+  <title>Collection — Tiziri, bijoux kabyles</title>
+
+  <!-- Polices Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="entete">
+    <div class="conteneur">
+      <a href="index.html" class="logo" aria-label="Tiziri, retour à l'accueil">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="#b9bcc2" stroke-width="2.5"/>
+          <path d="M20 6 L32 20 L20 34 L8 20Z" fill="#2e7a57"/>
+          <circle cx="20" cy="20" r="5" fill="#c8452c"/>
+        </svg>
+        <span class="logo-texte">Tizi<span>ri</span></span>
+      </a>
+
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="collection.html" class="actif">Collection</a></li>
+          <li><a href="savoir-faire.html">Savoir-faire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <main>
+    <section class="bandeau">
+      <div class="conteneur">
+        <span class="surtitre">Fait main</span>
+        <h1>Notre collection</h1>
+        <p>Chaque bijou est réalisé à la main en argent massif, émail et corail. Filtrez par type de bijou pour trouver la pièce qui vous ressemble.</p>
+      </div>
+    </section>
+    <div class="frise" aria-hidden="true"></div>
+
+    <section class="section">
+      <div class="conteneur">
+        <!-- Boutons de filtre : gérés par js/main.js -->
+        <div class="filtres" role="group" aria-label="Filtrer par catégorie">
+          <button class="filtre actif" data-filtre="tous">Tous</button>
+          <button class="filtre" data-filtre="broche">Broches</button>
+          <button class="filtre" data-filtre="fibule">Fibules</button>
+          <button class="filtre" data-filtre="bracelet">Bracelets</button>
+          <button class="filtre" data-filtre="collier">Colliers</button>
+          <button class="filtre" data-filtre="boucles">Boucles d'oreilles</button>
+          <button class="filtre" data-filtre="bague">Bagues</button>
+        </div>
+
+        <p class="compteur" aria-live="polite"><span id="nb-produits">9</span> bijou(x) affiché(s)</p>
+
+        <div class="grille-produits">
+          <article class="carte" data-categorie="broche">
+            <div class="carte-image">
+              <span class="badge">Best-seller</span>
+              <img src="images/tabzimt.svg" alt="Tabzimt">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Broche</span>
+              <h3>Tabzimt</h3>
+              <p>La grande broche ronde traditionnelle, émail tricolore et sept cabochons de corail.</p>
+              <div class="carte-pied">
+                <span class="prix">320 €</span>
+                <a href="contact.html" class="lien-fleche">Commander →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte" data-categorie="fibule">
+            <div class="carte-image">
+              <img src="images/fibule.svg" alt="Taxlalt">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Fibule</span>
+              <h3>Taxlalt</h3>
+              <p>Fibule triangulaire portée par paire pour retenir la robe kabyle.</p>
+              <div class="carte-pied">
+                <span class="prix">190 €</span>
+                <a href="contact.html" class="lien-fleche">Commander →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte" data-categorie="bracelet">
+            <div class="carte-image">
+              <img src="images/bracelet.svg" alt="Manchette Ath Yenni">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Bracelet</span>
+              <h3>Manchette Ath Yenni</h3>
+              <p>Large bracelet rigide aux bandes d'émail vert et jaune, losanges bleus.</p>
+              <div class="carte-pied">
+                <span class="prix">245 €</span>
+                <a href="contact.html" class="lien-fleche">Commander →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte" data-categorie="collier">
+            <div class="carte-image">
+              <span class="badge">Nouveau</span>
+              <img src="images/collier.svg" alt="Collier Tafsut">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Collier</span>
+              <h3>Collier Tafsut</h3>
+              <p>Perles de corail et d'argent, pendentif en losange émaillé.</p>
+              <div class="carte-pied">
+                <span class="prix">280 €</span>
+                <a href="contact.html" class="lien-fleche">Commander →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte" data-categorie="boucles">
+            <div class="carte-image">
+              <img src="images/boucles.svg" alt="Boucles Thafath">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Boucles d'oreilles</span>
+              <h3>Boucles Thafath</h3>
+              <p>Disques émaillés bleu et jaune, pampilles de corail.</p>
+              <div class="carte-pied">
+                <span class="prix">120 €</span>
+                <a href="contact.html" class="lien-fleche">Commander →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte" data-categorie="bague">
+            <div class="carte-image">
+              <img src="images/bague.svg" alt="Bague Tiziri">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Bague</span>
+              <h3>Bague Tiziri</h3>
+              <p>Chaton en losange émaillé vert, cœur de corail.</p>
+              <div class="carte-pied">
+                <span class="prix">85 €</span>
+                <a href="contact.html" class="lien-fleche">Commander →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte" data-categorie="broche">
+            <div class="carte-image">
+              <img src="images/tabzimt.svg" alt="Petite Tabzimt">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Broche</span>
+              <h3>Petite Tabzimt</h3>
+              <p>Version réduite de la broche ronde, idéale pour un usage quotidien.</p>
+              <div class="carte-pied">
+                <span class="prix">160 €</span>
+                <a href="contact.html" class="lien-fleche">Commander →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte" data-categorie="bracelet">
+            <div class="carte-image">
+              <span class="badge">Nouveau</span>
+              <img src="images/bracelet.svg" alt="Jonc Djurdjura">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Bracelet</span>
+              <h3>Jonc Djurdjura</h3>
+              <p>Bracelet fin en argent ciselé, rehaussé de trois coraux.</p>
+              <div class="carte-pied">
+                <span class="prix">135 €</span>
+                <a href="contact.html" class="lien-fleche">Commander →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="carte" data-categorie="collier">
+            <div class="carte-image">
+              <img src="images/collier.svg" alt="Collier de mariée">
+            </div>
+            <div class="carte-contenu">
+              <span class="categorie">Collier</span>
+              <h3>Collier de mariée</h3>
+              <p>Parure de cérémonie en corail, à porter avec la robe kabyle.</p>
+              <div class="carte-pied">
+                <span class="prix">390 €</span>
+                <a href="contact.html" class="lien-fleche">Commander →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="conteneur">
+        <div class="titre-section">
+          <h2>Une pièce sur mesure ?</h2>
+          <p>Nos artisans peuvent adapter un modèle à vos envies : taille, couleurs d'émail, gravure d'un prénom en tifinagh.</p>
+        </div>
+        <div class="centre" style="margin-top:0">
+          <a href="contact.html" class="bouton">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="pied">
+    <div class="frise" aria-hidden="true" style="margin-top:-3.5rem; margin-bottom:3rem;"></div>
+    <div class="conteneur">
+      <div class="pied-grille">
+        <div>
+          <h4>Tiziri</h4>
+          <p>Bijoux kabyles en argent émaillé, façonnés à la main dans le respect de la tradition.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="savoir-faire.html">Savoir-faire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Paris, France</li>
+            <li>contact@tiziri-bijoux.fr</li>
+            <li>01 23 45 67 89</li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© <span class="annee">2026</span> Tiziri — Projet de cours (boutique fictive).</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
