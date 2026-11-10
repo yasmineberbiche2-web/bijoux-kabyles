@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Tiziri pour une commande, une pièce sur mesure ou un renseignement sur nos bijoux kabyles.">
+  <title>Contact — Tiziri, bijoux kabyles</title>
+
+  <!-- Polices Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="entete">
+    <div class="conteneur">
+      <a href="index.html" class="logo" aria-label="Tiziri, retour à l'accueil">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="#b9bcc2" stroke-width="2.5"/>
+          <path d="M20 6 L32 20 L20 34 L8 20Z" fill="#2e7a57"/>
+          <circle cx="20" cy="20" r="5" fill="#c8452c"/>
+        </svg>
+        <span class="logo-texte">Tizi<span>ri</span></span>
+      </a>
+
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="savoir-faire.html">Savoir-faire</a></li>
+          <li><a href="contact.html" class="actif">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <main>
+    <section class="bandeau">
+      <div class="conteneur">
+        <span class="surtitre">Une question ?</span>
+        <h1>Contactez-nous</h1>
+        <p>Commande, pièce sur mesure ou simple renseignement : nous vous répondons sous 48 heures.</p>
+      </div>
+    </section>
+    <div class="frise" aria-hidden="true"></div>
+
+    <section class="section">
+      <div class="conteneur contact-grille">
+        <aside class="infos">
+          <h2>Nos coordonnées</h2>
+          <div class="info">
+            <strong>Atelier</strong>
+            12 rue des Orfèvres<br>75011 Paris
+          </div>
+          <div class="info">
+            <strong>Téléphone</strong>
+            01 23 45 67 89
+          </div>
+          <div class="info">
+            <strong>E-mail</strong>
+            contact@tiziri-bijoux.fr
+          </div>
+          <div class="info">
+            <strong>Horaires</strong>
+            Du mardi au samedi<br>10 h – 19 h
+          </div>
+        </aside>
+
+        <!-- novalidate : la vérification est faite en JavaScript (js/main.js) -->
+        <form class="formulaire" id="formulaire-contact" novalidate>
+          <div class="champ">
+            <label for="nom">Nom complet *</label>
+            <input type="text" id="nom" name="nom" placeholder="Ex. : Lila Amrouche">
+            <span class="message-erreur">Veuillez indiquer votre nom (2 caractères minimum).</span>
+          </div>
+
+          <div class="champ">
+            <label for="email">Adresse e-mail *</label>
+            <input type="email" id="email" name="email" placeholder="Ex. : lila@exemple.fr">
+            <span class="message-erreur">Veuillez saisir une adresse e-mail valide.</span>
+          </div>
+
+          <div class="champ">
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet">
+              <option value="commande">Commande d'un bijou</option>
+              <option value="sur-mesure">Pièce sur mesure</option>
+              <option value="info">Renseignement</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="champ">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" placeholder="Votre message..."></textarea>
+            <span class="message-erreur">Votre message doit contenir au moins 10 caractères.</span>
+          </div>
+
+          <button type="submit" class="bouton">Envoyer le message</button>
+          <p class="confirmation" id="confirmation" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+      <div class="conteneur">
+        <div class="titre-section">
+          <h2>Questions fréquentes</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Les bijoux sont-ils en argent massif ?</summary>
+            <p>Oui, toutes nos pièces sont réalisées en argent massif 925, rehaussé d'émail et de corail.</p>
+          </details>
+          <details>
+            <summary>Quels sont les délais de livraison ?</summary>
+            <p>Comptez 3 à 5 jours pour une pièce en stock et 3 à 4 semaines pour une création sur mesure.</p>
+          </details>
+          <details>
+            <summary>Comment entretenir mon bijou ?</summary>
+            <p>Évitez le contact avec l'eau et les parfums. Nettoyez l'argent avec un chiffon doux et rangez le bijou à l'abri de l'air.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="pied">
+    <div class="frise" aria-hidden="true" style="margin-top:-3.5rem; margin-bottom:3rem;"></div>
+    <div class="conteneur">
+      <div class="pied-grille">
+        <div>
+          <h4>Tiziri</h4>
+          <p>Bijoux kabyles en argent émaillé, façonnés à la main dans le respect de la tradition.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="savoir-faire.html">Savoir-faire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Paris, France</li>
+            <li>contact@tiziri-bijoux.fr</li>
+            <li>01 23 45 67 89</li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© <span class="annee">2026</span> Tiziri — Projet de cours (boutique fictive).</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
