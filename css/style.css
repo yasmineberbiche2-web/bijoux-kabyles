@@ -1,0 +1,841 @@
+/* =========================================================
+   Tiziri — Bijoux kabyles
+   Feuille de style commune à toutes les pages
+   ========================================================= */
+
+/* ---------- 1. Variables (couleurs de l'émail kabyle) ---------- */
+:root {
+  --creme: #f7f1e6;
+  --sable: #ece2d0;
+  --argent: #b9bcc2;
+  --encre: #221d19;
+  --gris: #5f5750;
+  --corail: #c8452c;
+  --jaune: #e2b13c;
+  --vert: #2e7a57;
+  --bleu: #1f5c9e;
+
+  --police-titre: "Cormorant Garamond", Georgia, serif;
+  --police-texte: "Work Sans", Arial, sans-serif;
+
+  --largeur-max: 1150px;
+  --rayon: 6px;
+}
+
+/* ---------- 2. Réinitialisation de base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--police-texte);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--encre);
+  background-color: var(--creme);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--police-titre);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.conteneur {
+  width: 90%;
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+}
+
+/* Frise de losanges inspirée des motifs berbères */
+.frise {
+  height: 14px;
+  background:
+    linear-gradient(135deg, var(--corail) 25%, transparent 25%) -7px 0 / 14px 14px,
+    linear-gradient(225deg, var(--corail) 25%, transparent 25%) -7px 0 / 14px 14px,
+    linear-gradient(315deg, var(--vert) 25%, transparent 25%) 0 0 / 14px 14px,
+    linear-gradient(45deg, var(--vert) 25%, var(--jaune) 25%) 0 0 / 14px 14px;
+}
+
+/* ---------- 3. En-tête et navigation ---------- */
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--encre);
+  color: var(--creme);
+}
+
+.entete .conteneur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  font-family: var(--police-titre);
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+}
+
+.logo-texte span {
+  color: var(--jaune);
+}
+
+.logo svg {
+  width: 34px;
+  height: 34px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.menu a:hover,
+.menu a.actif {
+  color: var(--jaune);
+  border-bottom-color: var(--jaune);
+}
+
+/* Bouton burger (visible seulement sur mobile) */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.burger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 6px 0;
+  background-color: var(--creme);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.burger.ouvert span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger.ouvert span:nth-child(2) {
+  opacity: 0;
+}
+.burger.ouvert span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ---------- 4. Boutons ---------- */
+.bouton {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  border: 2px solid var(--corail);
+  border-radius: var(--rayon);
+  background-color: var(--corail);
+  color: #fff;
+  font-family: var(--police-texte);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.bouton:hover {
+  background-color: transparent;
+  color: var(--corail);
+}
+
+.bouton-clair {
+  background-color: transparent;
+  border-color: var(--creme);
+  color: var(--creme);
+}
+
+.bouton-clair:hover {
+  background-color: var(--creme);
+  color: var(--encre);
+}
+
+/* ---------- 5. Bandeau d'accueil (hero) ---------- */
+.hero {
+  background-color: var(--encre);
+  color: var(--creme);
+  padding: 5rem 0 6rem;
+  overflow: hidden;
+}
+
+.hero .conteneur {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.surtitre {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--jaune);
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 em {
+  color: var(--jaune);
+  font-style: italic;
+}
+
+.hero p {
+  max-width: 34rem;
+  margin-bottom: 2.2rem;
+  color: #d9d0c3;
+  font-size: 1.1rem;
+}
+
+.hero .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-visuel {
+  position: relative;
+}
+
+.hero-visuel img {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.5));
+  animation: flotter 6s ease-in-out infinite;
+}
+
+@keyframes flotter {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(3deg); }
+}
+
+/* Bandeau de titre pour les pages secondaires */
+.bandeau {
+  background-color: var(--encre);
+  color: var(--creme);
+  padding: 4rem 0 3.5rem;
+  text-align: center;
+}
+
+.bandeau h1 {
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  margin-bottom: 0.8rem;
+}
+
+.bandeau p {
+  max-width: 40rem;
+  margin: 0 auto;
+  color: #d9d0c3;
+}
+
+/* ---------- 6. Sections génériques ---------- */
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background-color: var(--sable);
+}
+
+.titre-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.titre-section h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 0.6rem;
+}
+
+.titre-section p {
+  max-width: 38rem;
+  margin: 0 auto;
+  color: var(--gris);
+}
+
+/* ---------- 7. Cartes produits ---------- */
+.grille-produits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: var(--rayon);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(34, 29, 25, 0.07);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.carte:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(34, 29, 25, 0.13);
+}
+
+.carte-image {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at 50% 40%, #fff 0%, var(--sable) 100%);
+}
+
+.carte-image img {
+  max-height: 100%;
+  transition: transform 0.4s;
+}
+
+.carte:hover .carte-image img {
+  transform: scale(1.06);
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  background-color: var(--vert);
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.carte-contenu {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.categorie {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bleu);
+}
+
+.carte h3 {
+  margin: 0.3rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.carte p {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  color: var(--gris);
+  font-size: 0.92rem;
+}
+
+.carte-pied {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prix {
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--corail);
+}
+
+.lien-fleche {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--encre);
+}
+
+.lien-fleche:hover {
+  color: var(--corail);
+}
+
+.centre {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ---------- 8. Les couleurs de l'émail (accueil) ---------- */
+.couleurs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.couleur {
+  padding: 2rem 1.5rem;
+  border-radius: var(--rayon);
+  background-color: #fff;
+  border-top: 6px solid var(--teinte);
+}
+
+.pastille {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--teinte);
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.15), 0 0 0 5px var(--argent);
+}
+
+.couleur h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.4rem;
+}
+
+.couleur p {
+  color: var(--gris);
+  font-size: 0.92rem;
+}
+
+/* ---------- 9. Bloc deux colonnes (texte + visuel) ---------- */
+.deux-colonnes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.deux-colonnes h2 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  margin-bottom: 1.2rem;
+}
+
+.deux-colonnes p {
+  margin-bottom: 1rem;
+  color: var(--gris);
+}
+
+.cadre-visuel {
+  padding: 3rem;
+  border-radius: var(--rayon);
+  background-color: var(--encre);
+}
+
+.cadre-visuel img {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* ---------- 10. Filtres de la collection ---------- */
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 3rem;
+}
+
+.filtre {
+  padding: 0.55rem 1.3rem;
+  border: 1.5px solid var(--encre);
+  border-radius: 30px;
+  background: transparent;
+  font-family: var(--police-texte);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filtre:hover,
+.filtre.actif {
+  background-color: var(--encre);
+  color: var(--creme);
+}
+
+.compteur {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--gris);
+  font-size: 0.9rem;
+}
+
+.carte.cache {
+  display: none;
+}
+
+/* ---------- 11. Savoir-faire : étapes ---------- */
+.etapes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  counter-reset: etape;
+}
+
+.etape {
+  position: relative;
+  padding: 2.5rem 1.6rem 1.8rem;
+  border-radius: var(--rayon);
+  background-color: #fff;
+  counter-increment: etape;
+}
+
+.etape::before {
+  content: counter(etape, decimal-leading-zero);
+  position: absolute;
+  top: -1.2rem;
+  left: 1.6rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: var(--rayon);
+  background-color: var(--corail);
+  color: #fff;
+  font-family: var(--police-titre);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.etape h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.etape p {
+  color: var(--gris);
+  font-size: 0.93rem;
+}
+
+/* Frise chronologique */
+.chronologie {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 2.5rem;
+  border-left: 3px solid var(--jaune);
+}
+
+.date {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.date::before {
+  content: "";
+  position: absolute;
+  left: calc(-2.5rem - 10px);
+  top: 0.35rem;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: var(--vert);
+  border: 3px solid var(--creme);
+}
+
+.date h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.date p {
+  color: var(--gris);
+}
+
+.citation {
+  max-width: 46rem;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--police-titre);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* ---------- 12. Contact ---------- */
+.contact-grille {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.infos {
+  padding: 2.5rem;
+  border-radius: var(--rayon);
+  background-color: var(--encre);
+  color: var(--creme);
+}
+
+.infos h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info {
+  margin-bottom: 1.4rem;
+}
+
+.info strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--jaune);
+}
+
+.formulaire {
+  padding: 2.5rem;
+  border-radius: var(--rayon);
+  background-color: #fff;
+}
+
+.champ {
+  margin-bottom: 1.4rem;
+}
+
+.champ label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.champ input,
+.champ select,
+.champ textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #d8cfc2;
+  border-radius: var(--rayon);
+  background-color: var(--creme);
+  font-family: var(--police-texte);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.champ input:focus,
+.champ select:focus,
+.champ textarea:focus {
+  outline: none;
+  border-color: var(--bleu);
+}
+
+.champ.erreur input,
+.champ.erreur textarea {
+  border-color: var(--corail);
+}
+
+.message-erreur {
+  display: none;
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  color: var(--corail);
+}
+
+.champ.erreur .message-erreur {
+  display: block;
+}
+
+.confirmation {
+  display: none;
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--rayon);
+  background-color: #e3f1e9;
+  color: var(--vert);
+  font-weight: 500;
+}
+
+.confirmation.visible {
+  display: block;
+}
+
+/* FAQ avec <details> */
+.faq {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq details {
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: var(--rayon);
+  background-color: #fff;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.faq details p {
+  margin-top: 0.8rem;
+  color: var(--gris);
+}
+
+/* ---------- 13. Pied de page ---------- */
+.pied {
+  background-color: var(--encre);
+  color: #cfc6b8;
+  padding: 3.5rem 0 1.5rem;
+  font-size: 0.92rem;
+}
+
+.pied-grille {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.pied h4 {
+  margin-bottom: 0.8rem;
+  color: var(--creme);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pied ul {
+  list-style: none;
+}
+
+.pied li {
+  margin-bottom: 0.4rem;
+}
+
+.pied a {
+  text-decoration: none;
+}
+
+.pied a:hover {
+  color: var(--jaune);
+}
+
+.copyright {
+  padding-top: 1.5rem;
+  border-top: 1px solid #3a332d;
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+/* ---------- 14. Responsive ---------- */
+@media (max-width: 900px) {
+  .hero .conteneur,
+  .deux-colonnes,
+  .contact-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero .actions {
+    justify-content: center;
+  }
+
+  .hero-visuel img {
+    max-width: 300px;
+  }
+
+  .couleurs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pied-grille {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--encre);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .menu.ouvert {
+    max-height: 320px;
+  }
+
+  .menu li {
+    border-top: 1px solid #3a332d;
+  }
+
+  .menu a {
+    display: block;
+    padding: 1rem 5%;
+    border-bottom: none;
+  }
+
+  .couleurs,
+  .pied-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+}
